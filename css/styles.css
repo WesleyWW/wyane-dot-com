@@ -12,7 +12,7 @@
     --body-font: 'Cabin', sans-serif;
     --main-font-color-dark: #252525;
     --secondary-font-color: #5f97c5;
-    --body-font-color: #ffffff;
+    --body-font-color: black;
 }
 
 html {
@@ -25,21 +25,31 @@ html {
 body{
     margin: 0;
     height: 100vh;
-    font-size: 5em;
+    font-size: 4em;
     font-family: 'Montserrat';
+    background-color: #000000;
     /* font-weight: bold; */
     
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
 .main-content {
-    height: 100vh;
+    height: 100%;
     padding: 2%;
 }
 
-
-
+/* HERO SECTION */
 #hero{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: black;
     background-image: url('/images/smoke2.jpg');
@@ -59,6 +69,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .hero-header{
@@ -119,8 +130,121 @@ body{
     font-size: 1.2rem;
     color: var(--secondary-font-color);
     margin: 0 1.6rem;
-    animation: spin 1.5s forwards;
+    animation: spinL 1.5s forwards;
     animation-delay: .5s;
+}
+
+.fa-arrow-circle-down {
+    margin-top: 2em;
+    background: transparent;
+    width: 2em;
+    color: #2e91b7;
+    animation: spinR 1.5s forwards;
+    animation-delay: .5s;
+}
+.fa-arrow-circle-down:hover {
+    color: #9fd1e5;
+    transition: all .4s ease;
+}
+/* END HERO SECTION */
+
+/* ABOUT ME SECTION */
+.about-me{
+    height: 100%;
+    background-color: #ffffff;
+    padding-bottom: 2em;
+}
+
+nav {
+    font-size: .5em;
+    width: 100%;
+    background-color: var(--secondary-font-color);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    padding: .5em .6em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav li:hover{
+    background-blend-mode: saturation;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: all .4s ease;
+}
+
+nav .current {
+    background-color: #ffffff;
+}
+nav .current:hover {
+    color: var(--secondary-font-color);
+    transform: scale(1);
+    transition: all .4s ease;
+}
+
+.about-text{
+    height: 80%;
+    width: 80%;
+    margin: 2em auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.about-header{
+    color: var(--secondary-font-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-p{
+    font-size: .5em;
+    line-height: 2em;
+    margin: 2em 0;
+}
+
+.btn {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    color: var(--secondary-font-color);
+    border: 3px solid var(--secondary-font-color);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+/* END ABOUT ME SECTION */
+
+/* SKILLS SECTION */
+.skills {
+    height: 100%;
+    width: 100%;
+    background-image: url('/images/smoke4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    body{
+        font-size: 3em;
+    }
 }
 
 
@@ -155,12 +279,21 @@ body{
     }
 }
 
-@keyframes spin {
+@keyframes spinL {
     0%{
         transform: rotate(0);
     }
     100%{
         opacity: 1;
         transform: rotate(-360deg);
+    }
+}
+@keyframes spinR {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(360deg);
     }
 }

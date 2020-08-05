@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: "Courier New", Courier, monospace;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #5f97c5;
+    --body-font-color: #ffffff;
+}
+
+html {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 5em;
+    font-family: 'Montserrat';
+    /* font-weight: bold; */
+    
+}
+
+.main-content {
+    height: 100vh;
+    padding: 2%;
+}
+
+
+
+#hero{
+    height: 100%;
+    width: 100%;
+    background: black;
+    background-image: url('/images/smoke2.jpg');
+    background-size: 50% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+.hero-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-header{
+    color: #9fd1e5;
+    opacity: 0;
+    animation: fadeDown .5s forwards;
+    animation-delay: 1.5s;
+}
+
+.hero-subheader{
+    color: #2e91b7;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: 1.5s;
+}
+
+.separator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 100%; 
+    max-width: 8.4rem;
+    height: .25rem;
+    color: #ffffff;
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+}
+
+.line-left::before, .line-right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1.2s;
+}
+
+.line-left::before {
+    left: 0;
+    border-left-color: #fff;
+
+}
+.line-right::before {
+    right: 0;
+    border-right-color: #fff;
+}
+
+.asterisk {
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+    animation: spin 1.5s forwards;
+    animation-delay: .5s;
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}

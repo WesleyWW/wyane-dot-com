@@ -16,6 +16,7 @@
 </head>
 <body>
   <div class="main-content">
+
     <section id="hero">
       <div class="hero-text">
         <h1 class="hero-header">Wesley W. Wilson</h1>
@@ -29,18 +30,15 @@
         <p class="hero-subheader">Fullstack Developer</p>
         <a href="#about-me"><i class="fas fa-arrow-circle-down"></i></a>
       </div>
-      
-      
-      
     </section>
 
     <section class="about-me" id="about-me">
       <nav>
         <ul>
-          <li class="current">About Me</li>
-          <li>Skills</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+          <li class="current"><a href="#about-me">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="about">
@@ -110,6 +108,86 @@
       </div>
     </section>
 
+    <section class="projects" id="projects">
+      <h1>Projects</h1>
+      <div class="projects-container">
+        <div class="project animate-left">
+          <h3>Project</h3>
+          <img src="/images/smoke3.jpg" alt="smoke3">
+          <p>Stack: React.js, Node.js, Express, MongoDB <br>
+            I built this as a fun app with a modern UI that allows users to search and 
+            add recipes to their profile. It was a great experience to learn React's 
+            backend by using Node and setting up a server and database. App utilizes 
+            user authorization and authentication, reusable components, API calls and 
+            is mobile responsive.</p>
+            <div class="project-links">
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+            </div>
+        </div>
+        <div class="project animate-right">
+          <h3>Project</h3>
+          <img src="/images/smoke3.jpg" alt="smoke3">
+          <p>Stack: React.js, Node.js, Express, MongoDB <br>
+            I built this as a fun app with a modern UI that allows users to search and 
+            add recipes to their profile. It was a great experience to learn React's 
+            backend by using Node and setting up a server and database. App utilizes 
+            user authorization and authentication, reusable components, API calls and 
+            is mobile responsive.</p>
+            <div class="project-links">
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+            </div>
+        </div>
+        <div class="project animate-left">
+          <h3>Project</h3>
+          <img src="/images/smoke3.jpg" alt="smoke3">
+          <p>Stack: React.js, Node.js, Express, MongoDB <br>
+            I built this as a fun app with a modern UI that allows users to search and 
+            add recipes to their profile. It was a great experience to learn React's 
+            backend by using Node and setting up a server and database. App utilizes 
+            user authorization and authentication, reusable components, API calls and 
+            is mobile responsive.</p>
+            <div class="project-links">
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+              <a href="#contact"><button class="btn  animate-bottom"> Contact </button></a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h1>Contact Me</h1>
+      <div class="contact-content">
+        <form action="https://formspree.io/xwkrydbz" method="POST" class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" autocomplete="off" required />
+            <label for="name" class="label-name">
+              <span class="content-name">Name</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" autocomplete="off" required />
+            <label for="email" class="label-name">
+              <span class="content-name">Email</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <input type="message" name="message" autocomplete="off" required />
+            <label for="message" class="label-name">
+              <span class="content-name">Message</span>
+            </label>     
+          </div>
+          <input type="submit" value="Submit" class="btn submit">
+        </form>
+        
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/wesley-w-wilson/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/WesleyWW" target="_blank"><i class="fab fa-github-square"></i></a>
+          <p><span class="email-label">Email</span>: <a href="mailto:wesleywwilson1@gmail.com">wesleywwilson1@gmail.com</a></p><br>
+        </div>
+      </div>
+    </section>
   </div>
   
   <script src="index.js"></script>

@@ -266,6 +266,8 @@ nav .current a:hover {
     margin-bottom: 2em;
     text-align: center;
     color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .skill-cards{
